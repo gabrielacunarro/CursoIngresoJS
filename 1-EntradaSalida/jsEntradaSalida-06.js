@@ -6,11 +6,11 @@ function sumar()
 {
 	// reservar memoria variables
 
-	let numUno
+	let numUno;
 
-	let numDos
+	let numDos;
 
-	let resultado
+	let resultado;
 
 	//traer id de variables desde html
 
