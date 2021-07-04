@@ -15,8 +15,10 @@ function mostrarAumento()
 
 	nuevoimporte = importe - descuento;
 
-	document.getElementById ("txtIdResultado").value = nuevoimporte;
+	// la respuesta tiene que salir en el cuadro de texto debo llevar el resultado alli 
 	
+	document.getElementById ("txtIdResultado").value = nuevoimporte;
+
 
 
 }
