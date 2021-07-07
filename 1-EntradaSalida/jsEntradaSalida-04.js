@@ -13,6 +13,6 @@ nombre = prompt("Ingrese su nombre");
 //copio el nombre que tengo guardado en la variable nombre dentro de la caja de texto embebida en la pag html
 document.getElementById("txtIdNombre").value = nombre;
 
-
+// el =nombre se invierte ya que se quiere cambiar el orden - destino
 }
 

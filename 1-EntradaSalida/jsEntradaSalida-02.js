@@ -7,9 +7,7 @@ function mostrar()
 
 	nombre = prompt("Ingrese nu nombre ");
 	
-
 	// nombre de una variable de a-z nums  _
-	
 	
 
 	alert(nombre);
