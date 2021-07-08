@@ -58,7 +58,7 @@ function PrecioFinal ()
 
     subtotal = precio1 + precio2 + precio3;
 
-    iva = ( subtotal * 25 ) / 100;
+    iva = subtotal *.25;
 
     preciofinal = subtotal - iva;
 

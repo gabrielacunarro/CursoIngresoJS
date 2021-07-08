@@ -17,7 +17,7 @@ function mostrarAumento()
 
 	// la respuesta tiene que salir en el cuadro de texto debo llevar el resultado alli 
 	
-	document.getElementById ("txtIdResultado").value = nuevo_importe;
+	document.getElementById ("txtIdResultado").value = nuevo_importe.toFixed(2);
 
 
 
