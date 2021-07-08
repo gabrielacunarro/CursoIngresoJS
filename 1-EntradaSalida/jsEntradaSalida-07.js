@@ -9,13 +9,9 @@ function sumar()
 	let num2;
 	let resultado;
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
+	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
 
-	num1 = parseInt(num1);
-
-	num2 = document.getElementById("txtIdNumeroDos").value;
-
-	num2 = parseInt(num2);
+	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
 
 	resultado = num1 + num2;
 
@@ -29,13 +25,9 @@ function restar()
 	let num2
 	let resultado
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
-
-	num1 = parseInt(num1);
-
-	num2 = document.getElementById("txtIdNumeroDos").value;
-
-	num2 = parseInt(num2);
+	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
+	
+	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
 
 	resultado = num1 - num2;
 
@@ -48,13 +40,9 @@ function multiplicar()
 	let num2
 	let resultado
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
+	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
 
-	num1 = parseInt(num1);
-
-	num2 = document.getElementById("txtIdNumeroDos").value;
-
-	num2 = parseInt(num2);
+	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
 
 	resultado = num1 * num2;
 
@@ -69,13 +57,9 @@ function dividir()
 	let num2
 	let resultado
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
+	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
 
-	num1 = parseInt(num1);
-
-	num2 = document.getElementById("txtIdNumeroDos").value;
-
-	num2 = parseInt(num2);
+	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
 
 	resultado = num1 / num2;
 
