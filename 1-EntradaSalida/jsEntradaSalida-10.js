@@ -6,18 +6,18 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	let importe;
-	let nuevoimporte;
+	let nuevo_importe;
 	let descuento;
 
 	importe = parseFloat(document.getElementById("txtIdImporte").value);
 
-	descuento = (importe * 25) / 100;
+	descuento = importe *.25;
 
-	nuevoimporte = importe - descuento;
+	nuevo_importe = importe - descuento;
 
 	// la respuesta tiene que salir en el cuadro de texto debo llevar el resultado alli 
 	
-	document.getElementById ("txtIdResultado").value = nuevoimporte;
+	document.getElementById ("txtIdResultado").value = nuevo_importe;
 
 
 
