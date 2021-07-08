@@ -6,7 +6,7 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
   let sueldo;
-  let nuevo;
+  let nuevo_sueldo;
   let aumento;
   // para calcular nuevo sueldo debo sumarle al original al aumento
   //el calculo de porcentaje de un valor lo consigo multiplicando el valor por el porcentaje y lo divido por 100
@@ -17,7 +17,7 @@ function mostrarAumento()
   
   aumento = (sueldo * 10) / 100;
 
-  nuevo = sueldo + aumento;
+  nuevo_sueldo = sueldo + aumento;
 
   document.getElementById("txtIdResultado").value = nuevo;
 
