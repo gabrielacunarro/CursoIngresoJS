@@ -15,7 +15,7 @@ function mostrarAumento()
 
   // recordar que en estos casos se usa parsefloat ya que el sueldo no es necesariamente un Z (num entero)
   
-  aumento = (sueldo * 10) / 100;
+  aumento = sueldo * 10 / 100;
 
   nuevo_sueldo = sueldo + aumento;
 
