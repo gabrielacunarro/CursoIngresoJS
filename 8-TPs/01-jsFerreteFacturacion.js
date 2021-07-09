@@ -38,7 +38,7 @@ function Promedio ()
 
     promedio = (precio1 + precio2 + precio3) / 3;
 
-    alert(promedio);
+    alert("El promedio es " + promedio);
 
 }
 function PrecioFinal () 
@@ -58,10 +58,10 @@ function PrecioFinal ()
 
     subtotal = precio1 + precio2 + precio3;
 
-    iva = subtotal *.25;
+    iva = subtotal *.21;
 
-    preciofinal = subtotal - iva;
+    preciofinal = subtotal + iva;
 
-    alert(preciofinal);
+    alert("Precio final + iva $" +preciofinal);
 
 }
