@@ -1,45 +1,45 @@
-function mostrar()
-{
+function mostrar() {
 	let estacion;
 	let destino;
-	let precio;
+	let precio_base;
 
 	estacion = document.getElementById("txtIdEstacion").value;
 	destino = document.getElementById("txtIdDestino").value;
+	precio_base = 15000
 
-	switch (estacion){
-		case "Invierno":
-			case "Bariloche":
-			case "Cataratas":
-			case "Mar del plata":
-			case "Cordoba":
-				break;
-		case "Primavera":
-			case "Bariloche":
-			case "Cataratas":
-			case "Mar del plata":
-			case "Cordoba":
-				break;
-		case "Otoño":
-			case "Bariloche":
-			case "Cataratas":
-			case "Mar del plata":
-			case "Cordoba":
-				break;
-		case "Verano":	
-		case "Bariloche":			
-		case "Cataratas":		
-		case "Mar del plata":
-		case "Cordoba":
+	switch (destino) {
+		case "Bariloche":
+			if (estacion == "Invierno") {
+				alert(precio_base * .2 + precio_base);
+			} else if (estacion == "Verano") {
+				alert(precio_base * .8);
+			} else {
+				alert(precio_base * .1 + precio_base);
+			}
 			break;
-	}		
-			
+		case "Cataratas":
+			if (estacion == "Invierno") {
+				alert(precio_base * .9);
+			} else {
+				alert(precio_base * .1 + precio_base);
+			}
+			break;
+		case "Cordoba":
+			if (estacion == "Invierno") {
+				alert(precio_base * .9);
+			} else if (estacion == "Verano") {
+				alert(precio_base * .1 + precio_base);
+			} else {
+				alert(precio_base);
+			} break;
+		case "Mar del plata":
+			if (estacion == "Invierno") {
+				alert(precio_base * .8);
+			} else if (estacion == "Verano") {
+				alert(precio_base * .2 + precio_base);
+			} else {
+				alert(precio_base * .1 + precio_base);
 
-
-
-
-
-
-
-
-}//FIN DE LA FUNCIÓN
+			}
+	}
+}
