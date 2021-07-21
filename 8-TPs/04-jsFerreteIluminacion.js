@@ -10,59 +10,93 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio() {
     let cantidad;
-    let marcas;
+    let marca;
+    let precio = 35;
+    let precio_recargo;
+    let precio_desc;
+    let precioFinal;
     let IIBB;
-    let precio;
+    
 
     cantidad = parseInt(document.getElementById("txtIdCantidad").value);
-    marcas = document.getElementById("Marca").value;
-    precio = 35 * cantidad;
-    IIBB = precio * .1;
+    marca = document.getElementById("Marca").value;
 
     if (cantidad >= 6) {
-        document.getElementById("txtIdprecioDescuento").value = precio * .5;
+        precioFinal = precio * cantidad;
+        precio_desc = precioFinal - precioFinal * 0.5;
+
+        document.getElementById("txtIdprecioDescuento").value = precio_desc;
+
     }
-    if (cantidad >= 7) {
-        document.getElementById("txtIdprecioDescuento").value = precio* .5 + IIBB;
-        alert("Ud pago " +  IIBB + " de IIBB");
-    }
+    switch (cantidad) {
+        case 5:
+            if (marca == "ArgentinaLuz") {
+                precioFinal = precio * cantidad;
+                precio_desc = precioFinal - precioFinal * 0.4;
 
-    switch (marcas) {
-        case "ArgentinaLuz":
-            if (cantidad == "5") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .6;
-            } else if (cantidad == "4") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .75;
-            } else if (cantidad == "3") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .85;
-            } break;
-        case "FelipeLamparas":
-            if (cantidad == "5") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .7;
-            } else if (cantidad == "4") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .75;
-            } else if (cantidad == "3") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .90;
-            } break;
-        case "JeLuz": case "Osram": case "HazIluminacion":
-            if (cantidad == "5") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .7;
-            } else if (cantidad == "4") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .8;
-            } else if (cantidad == "3") {
-                document.getElementById("txtIdprecioDescuento").value = precio * .95;
-            } break;
-        case "ArgentinaLuz": case "FelipeLamparas": case "JeLuz": case "Osram": case "HazIluminacion":
-            if (cantidad >= 6) {
-                document.getElementById("txtIdprecioDescuento").value = precio * .5;
+                document.getElementById("txtIdprecioDescuento").value = precio_desc;
+            }
+            else {
+                precioFinal = precio * cantidad;
+                precio_desc = precioFinal - precioFinal * 0.3;
 
+                document.getElementById("txtIdprecioDescuento").value = precio_desc;
+            }
+            break;
 
+        case 4:
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+                precioFinal = precio * cantidad;
+                precio_desc = precioFinal - precioFinal * 0.25;
+
+                document.getElementById("txtIdprecioDescuento").value = precio_desc;
+            }
+            else {
+                precioFinal = precio * cantidad;
+                precio_desc = precioFinal - precioFinal * 0.20;
+
+                document.getElementById("txtIdprecioDescuento").value = precio_desc;
+            }
+            break;
+        case 3:
+            if (marca == "ArgentinaLuz") {
+                precioFinal = precio * cantidad;
+                precio_desc = precioFinal - precioFinal * 0.15;
+
+                document.getElementById("txtIdprecioDescuento").value = precio_desc;
             }
 
+            else if (marca == "FelipeLamparas") {
+                precioFinal = precio * cantidad;
+                precio_desc = precioFinal - precioFinal * 0.10;
+
+                document.getElementById("txtIdprecioDescuento").value = precio_desc;
+            }
+            else {
+                precioFinal = precio * cantidad;
+                precio_desc = precioFinal - precioFinal * 0.05;
+
+                document.getElementById("txtIdprecioDescuento").value = precio_desc;
+            }
+            break;
+        case 1:
+        case 2:
+            precioFinal = precio * cantidad;
+
+            document.getElementById("txtIdprecioDescuento").value = precioFinal;
+            break;
 
     }
+    if (precio_desc > 120) {
 
+        IIBB = precio_desc * 0.10;
+        precio_recargo = precio_desc + IIBB;
 
+        document.getElementById("txtIdprecioDescuento").value = precio_recargo;
+
+        alert("Usted abono $" + IIBB + " de IIBB");
+
+    }
 }
 
 
@@ -72,10 +106,47 @@ function CalcularPrecio() {
 
 
 
-          // else if (cantidad >= 6) {
-               // document.getElementById("txtIdprecioDescuento").value = (precio_final * 6) * 0.5
 
-/*        case "ArgentinaLuz": case "FelipeLamparas": case "Jeluz": case "HazIluminacion": case "Osram":
-if (cantidad <= 6) {
- document.getElementById("txtIdprecioDescuento").value = precio_final * 0.5;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
