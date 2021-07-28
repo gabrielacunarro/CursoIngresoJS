@@ -2,11 +2,11 @@
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar() {
-	let num = 0
-	let num_max = 0
-	let num_min = 0
+	let num;
+	let num_max; 
+	let num_min; 
 	let respuesta;
-	flag = 0
+	let flag = 0
 
 
 
@@ -25,9 +25,9 @@ function mostrar() {
 			num_max = num;
 
 
-		} else if (num < num_min) {
+		} else  (num < num_min) 
 			num_min = num;
-		}
+		
 
 		respuesta = prompt("Quiere ingresar otro numero s/n").toLowerCase();
 
