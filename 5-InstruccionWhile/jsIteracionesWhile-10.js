@@ -12,7 +12,103 @@ hasta que el usuario quiera, mostrar:
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar() {
 	//declarar contadores y variables 
-	let num;
+	let numeroIngresado,
+		cantidadNegativos = 0,
+		cantidadPositivos = 0,
+		sumaNegativos = 0,
+		sumaPositivos = 0,
+		cantidadCeros = 0,
+		cantidadPares = 0,
+		promPositivos,
+		promNegativos,
+		difPositivosNegativos,
+		respuesta;
+	
+		do{
+
+			numeroIngresado = parseInt(prompt("Ingrese un numero"));
+			
+			while(isNaN(numeroIngresado)){
+				numeroIngresado = parseInt(prompt("Ingrese un numero valido"));
+			}
+
+			if(numeroIngresado %2 ==0){
+				cantidadPares++;
+			}
+			if(numeroIngresado == 0){
+				cantidadCeros++;
+			}
+			else if(numeroIngresado > 0){
+				cantidadPositivos++;
+				sumaPositivos += numeroIngresado;
+			}
+			else{
+				cantidadNegativos++;
+				sumaNegativos += numeroIngresado;
+			}
+			
+
+			respuesta = prompt("Desea seguir ingresando numeros? si/no");
+
+			while((respuesta != "si" && respuesta != "no") || !isNaN(respuesta)){
+				alert("Valor incorrecto. responda correctamente");
+				respuesta = prompt("Desea seguir ingresando numeros? si/no");
+			}
+
+		}while(respuesta != "no");
+	
+	if(cantidadPositivos > 0){
+		promPositivos = sumaPositivos / cantidadPositivos;
+		alert("El promedio de positivos es de: " + promPositivos);
+		//document.write("El promedio de positivos es de: " + promPositivos + "</br>");
+	}else{
+		alert("No hay numeros positivos");
+		//document.write("No hay numeros positivos </br>");
+	}
+
+	if(cantidadNegativos > 0){
+		promNegativos = sumaNegativos / cantidadNegativos;
+		alert("El promedio de negativos es de: " + promNegativos);
+		//document.write("El promedio de negativos es de: " + promNegativos + "</br>");
+	}else{
+		alert("No hay numeros negativos");
+		//document.write("No hay numeros negativos </br>");
+	}
+
+	difPositivosNegativos = cantidadPositivos - cantidadNegativos;
+
+	/////////////////////////////////////////////////////////////////////////////////
+	/*MUESTREO CON ALERTS*/
+
+	alert("La cantidad de positivos es de: " + cantidadPositivos);
+	alert("La cantidad de negativos es de: " + cantidadNegativos);
+	
+	alert("La suma de positivos es de: " + sumaPositivos);
+	alert("La suma de negativos es de: " + sumaNegativos);
+	
+	alert("La cantidad de numeros pares es de: " + cantidadPares);
+	alert("La suma de ceros es de: " + cantidadCeros);
+	alert("La diferencia de positivos y negativos: " + difPositivosNegativos);
+
+
+
+}
+
+
+
+/* 	alert("Ingreso " + contador + "  numeros");
+	alert("Promedio  = " + promedio_positiv);
+	alert("Ingreso " + contador + "  numeros");
+	alert("Promedio  = " + promedio_negativ);*/
+
+
+
+
+
+
+
+
+/*	let num;
 	let respuesta = "s"
 	let cantidadNegativos = 0;
 	let cantidadPositivos = 0;
@@ -61,26 +157,6 @@ function mostrar() {
 	
 	alert("La cantidad de numeros pares es de: " + cantidad_par);
 	alert("La suma de ceros es de: " + cantidad_0);
-	alert("La diferencia de positivos y negativos: " + diferencia);
-
-
-
-}
-
-
-
-/* 	alert("Ingreso " + contador + "  numeros");
-	alert("Promedio  = " + promedio_positiv);
-	alert("Ingreso " + contador + "  numeros");
-	alert("Promedio  = " + promedio_negativ);*/
-
-
-
-
-
-
-
-
-
+	alert("La diferencia de positivos y negativos: " + diferencia); */
 
 
